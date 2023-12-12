@@ -20,9 +20,14 @@ public class LearningJenkinsCicdApplication extends SpringBootServletInitializer
 		SpringApplication.run(LearningJenkinsCicdApplication.class, args);
 	}
 
-	@RequestMapping(value = "/home1")
-	public String getName(){
-		return "Hello World";
+	@GetMapping(value = "/home")
+	public String getHome(){
+		return "Home";
+	}
+
+	@GetMapping(value = "/about")
+	public String getAbout(){
+		return "About";
 	}
 
 }
